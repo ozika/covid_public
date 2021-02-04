@@ -185,8 +185,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#exploratory-plots">
-   Exploratory plots
+  <a class="reference internal" href="#exploratory-analyses">
+   Exploratory analyses
   </a>
  </li>
 </ul>
@@ -312,13 +312,18 @@
   </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exploratory-plots">
-   Exploratory plots
+  <a class="reference internal nav-link" href="#exploratory-analyses">
+   Exploratory analyses
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#clustering-timecourses">
      Clustering timecourses
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#influence-of-infection">
+     Influence of infection
     </a>
    </li>
   </ul>
@@ -421,6 +426,8 @@ COVID-related worries, thoughts, avoidance and probability estimates</p>
 <span class="c1">#md = smf.mixedlm(&quot;covid_worry ~ stai_ta*obj_severity&quot;, sdf, groups=sdf[&quot;GROUP&quot;])</span>
 <span class="c1">#mdf = md.fit()</span>
 <span class="c1">#print(mdf.summary())</span>
+<span class="n">cluster</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">get_sick</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </div>
 </div>
@@ -428,8 +435,8 @@ COVID-related worries, thoughts, avoidance and probability estimates</p>
 </div>
 </div>
 </div>
-<div class="section" id="exploratory-plots">
-<h1>Exploratory plots<a class="headerlink" href="#exploratory-plots" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="exploratory-analyses">
+<h1>Exploratory analyses<a class="headerlink" href="#exploratory-analyses" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="clustering-timecourses">
 <h2>Clustering timecourses<a class="headerlink" href="#clustering-timecourses" title="Permalink to this headline">¶</a></h2>
 <p>In this anlysis, we group data into 5 clusters using k-Means. For now, the N of clusters is fixed, so 5 are <em>imposed</em>, however I will implement a model selection procedure which chooses the most likely amount of clusters.
@@ -520,17 +527,84 @@ The plots are colored according to a secondary variable, in the first case, the 
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;obj_severity&quot;</span><span class="p">,</span> <span class="s2">&quot;covid_worry&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_beh&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_anx&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_all&quot;</span><span class="p">,</span> <span class="s2">&quot;prob_est&quot;</span><span class="p">]</span>
 <span class="c1"># qs not included because they start later in the project: &quot;covid_thoughts&quot;, &quot;skepticism&quot;</span>
-<span class="k">for</span> <span class="n">dep_var</span> <span class="ow">in</span> <span class="n">var</span><span class="p">:</span>
-    <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">estimate_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">)</span>
-    <span class="n">visualize_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="s2">&quot;stai_ta&quot;</span><span class="p">)</span>               
+<span class="k">if</span> <span class="n">cluster</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">dep_var</span> <span class="ow">in</span> <span class="n">var</span><span class="p">:</span>
+        <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">estimate_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">)</span>
+        <span class="n">visualize_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="s2">&quot;stai_ta&quot;</span><span class="p">)</span>               
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cov_inferential_I_8_02.png" src="_images/cov_inferential_I_8_02.png" />
-<img alt="_images/cov_inferential_I_8_12.png" src="_images/cov_inferential_I_8_12.png" />
-<img alt="_images/cov_inferential_I_8_22.png" src="_images/cov_inferential_I_8_22.png" />
-<img alt="_images/cov_inferential_I_8_32.png" src="_images/cov_inferential_I_8_32.png" />
+<img alt="_images/cov_inferential_I_8_0.png" src="_images/cov_inferential_I_8_0.png" />
+<img alt="_images/cov_inferential_I_8_1.png" src="_images/cov_inferential_I_8_1.png" />
+<img alt="_images/cov_inferential_I_8_2.png" src="_images/cov_inferential_I_8_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="influence-of-infection">
+<h2>Influence of infection<a class="headerlink" href="#influence-of-infection" title="Permalink to this headline">¶</a></h2>
+<p>In this section I will look at how getting infected influenced the different measures</p>
+<p>There are quite a few people who indicated that they had covid on 1 or 2 sessions but then on subsequent sessions didn’t indicate it any more.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="s2">&quot;q6_me_inf&quot;</span><span class="p">,</span> <span class="s2">&quot;PROLIFICID&quot;</span><span class="p">]]</span>
+<span class="n">ntdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;q6_me_inf&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s1">&#39;sess&#39;</span><span class="p">)</span>
+<span class="n">ntdf</span><span class="p">[</span><span class="s2">&quot;when_got_sick&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ntdf</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+<span class="c1"># turn to timeseries data type</span>
+<span class="c1">#ts = to_time_series(tdf)</span>
+<span class="n">ntdf</span><span class="o">=</span> <span class="n">ntdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">ntdf</span><span class="p">[</span><span class="s2">&quot;when_got_sick&quot;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,:]</span>
+<span class="n">infected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ntdf</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="c1">#df = df.set_index(&quot;PROLIFICID&quot;)</span>
+<span class="c1">#idf = df.loc[df.index.intersection(infected),:]</span>
+<span class="n">nptdf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ntdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;when_got_sick&quot;</span><span class="p">]))</span>
+<span class="n">y</span><span class="p">,</span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">nptdf</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> 
+<span class="n">gotsick</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([])</span>
+<span class="n">gotsick</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">nptdf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">gotsick</span><span class="p">[:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="k">for</span> <span class="n">iy</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">gotsick</span><span class="p">[</span><span class="n">iy</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">y</span><span class="o">==</span><span class="n">iy</span><span class="p">])</span>
+    <span class="c1">#print(sep)</span>
+<span class="n">ntdf</span><span class="p">[</span><span class="s2">&quot;sess_got_sick&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">gotsick</span>
+
+<span class="n">inf_df_wide</span> <span class="o">=</span> <span class="n">ntdf</span>
+
+<span class="c1">## bring  info about when they got infected back </span>
+<span class="n">inf_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;PROLIFICID&quot;</span><span class="p">)</span>
+<span class="n">inf_df</span> <span class="o">=</span> <span class="n">inf_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">inf_df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">infected</span><span class="p">),:]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;obj_severity&quot;</span><span class="p">,</span> <span class="s2">&quot;covid_worry&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_beh&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_anx&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_all&quot;</span><span class="p">,</span> <span class="s2">&quot;prob_est&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">var</span><span class="p">:</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;PROLIFICID&quot;</span><span class="p">]]</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s1">&#39;sess&#39;</span><span class="p">)</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tdf</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">infected</span><span class="p">),:]</span>
+    <span class="n">ntdf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tdf</span><span class="p">)</span>
+    <span class="n">locked_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">45</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+    <span class="n">locked_d</span><span class="p">[:]</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ntdf</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="n">locked_d</span><span class="p">[</span><span class="n">row</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">20</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="n">gotsick</span><span class="p">[</span><span class="n">row</span><span class="p">])]</span> <span class="o">=</span> <span class="n">ntdf</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">gotsick</span><span class="p">[</span><span class="n">row</span><span class="p">]):</span><span class="mi">20</span><span class="p">]</span>
+    <span class="n">locked_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">locked_d</span><span class="p">)</span>
+    <span class="n">locked_df</span> <span class="o">=</span> <span class="n">locked_df</span><span class="o">.</span><span class="n">melt</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">locked_df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="mi">68</span><span class="p">,</span> <span class="n">err_style</span><span class="o">=</span><span class="s1">&#39;band&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;sessions since getting infected&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cov_inferential_I_11_0.png" src="_images/cov_inferential_I_11_0.png" />
+<img alt="_images/cov_inferential_I_11_1.png" src="_images/cov_inferential_I_11_1.png" />
+<img alt="_images/cov_inferential_I_11_2.png" src="_images/cov_inferential_I_11_2.png" />
+<img alt="_images/cov_inferential_I_11_3.png" src="_images/cov_inferential_I_11_3.png" />
+<img alt="_images/cov_inferential_I_11_4.png" src="_images/cov_inferential_I_11_4.png" />
+<img alt="_images/cov_inferential_I_11_5.png" src="_images/cov_inferential_I_11_5.png" />
 </div>
 </div>
 </div>

@@ -34,8 +34,9 @@ Here is a preview of the cell contents:
 -------------------
 var = ["obj_severity", "covid_worry", "avoid_beh", "avoid_anx", "avoid_all", "prob_est"]
 # qs not included because they start later in the project: "covid_thoughts", "skepticism"
-for dep_var in var:
-    tdf, model = estimate_clusters(df, dep_var)
-    visualize_clusters(df, tdf, model, dep_var, "stai_ta")               
+if cluster == 1:
+    for dep_var in var:
+        tdf, model = estimate_clusters(df, dep_var)
+        visualize_clusters(df, tdf, model, dep_var, "stai_ta")               
 -------------------
 
