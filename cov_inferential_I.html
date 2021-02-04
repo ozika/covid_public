@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inferential stats: Part I &#8212; Longitudinal study on worries and COVID</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="COVID Study - On-line part, Descriptives" href="cov_final_overview.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Longitudinal study on worries and COVID</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing-page.html">
+   Landing page
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Intro
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_collapsing_measures.html">
+   Collapsing measures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_online_demographics.html">
+   Online Demographics Data
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Demographics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_online_demographics.html">
+   Online Demographics Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html">
+   Selection bias lab experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#age-and-gender">
+   Age and Gender
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#stai-trait-state-distributions-and-correlation">
+   STAI trait/state  distributions and correlation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#cross-correlations">
+   Cross Correlations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#summary-table">
+   Summary Table
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Descriptives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html">
+   COVID Study - On-line part, Descriptives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#number-of-participants">
+   Number of participants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#basic-demographics">
+   basic demographics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#personality-measures">
+   personality measures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#covid-questionnaires">
+   COVID Questionnaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#aggregate-measures-descriptives">
+   Aggregate measures descriptives
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Inferential stats: Part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#exploratory-plots">
+   Exploratory plots
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/cov_inferential_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ozika/covid_public"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ozika/covid_public/issues/new?title=Issue%20on%20page%20%2Fcov_inferential_I.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ozika/covid_public/gh-pages?urlpath=tree/content/cov_inferential_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Inferential stats: Part I
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relationships-within-session">
+     Relationships within-session
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#session-1-tbd">
+       Session 1 (tbd)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exploratory-plots">
+   Exploratory plots
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clustering-timecourses">
+     Clustering timecourses
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### few links of LME models in Python</span>
+<span class="c1"># https://www.kaggle.com/ojwatson/mixed-models - can also work with seaborn, so, nice for quick fits</span>
+<span class="c1"># tensorflow https://www.tensorflow.org/probability/examples/Linear_Mixed_Effects_Models</span>
+<span class="c1"># https://github.com/kshedden/Statsmodels-MixedLM</span>
+<span class="c1"># https://github.com/bambinos/bambi</span>
+<span class="c1"># https://arviz-devs.github.io/arviz/ - is meant to work with bambi which is based entirely on pymc3 and theano</span>
+
+<span class="c1">### temporal analyses and tricks</span>
+<span class="c1">#https://www.dataquest.io/blog/tutorial-time-series-analysis-with-pandas/</span>
+<span class="c1">#https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.resample.html</span>
+<span class="c1"># peak alignment https://ourcodingclub.github.io/tutorials/pandas-time-series/</span>
+<span class="c1"># https://tslearn.readthedocs.io/en/stable/quickstart.html python toolbox to work with time series</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inferential-stats-part-i">
+<h1>Inferential stats: Part I<a class="headerlink" href="#inferential-stats-part-i" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import modules needed</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="p">;</span> <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">sk</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">tslearn.metrics</span> <span class="kn">import</span> <span class="n">dtw</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ondrej/.conda/envs/python3.7/lib/python3.7/site-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">==</span><span class="s2">&quot;/data/drive/postdoc/Project4_covid/covid-fear/scripts&quot;</span><span class="p">:</span>
+    <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="k">elif</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span><span class="o">==</span><span class="s2">&quot;/data/drive/postdoc/Project4_covid/covid-fear/final_overview/content&quot;</span><span class="p">:</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s2">&quot;../&quot;</span>
+<span class="c1"># load main dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../data/full_dataset_only_complete.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 5825 entries, 0 to 5824
+Columns: 143 entries, PROLIFICID to q8_vaccine_for_everyone_days
+dtypes: float64(99), int64(1), object(43)
+memory usage: 6.4+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="relationships-within-session">
+<h2>Relationships within-session<a class="headerlink" href="#relationships-within-session" title="Permalink to this headline">¶</a></h2>
+<p><strong>What we are interested to predict?</strong>
+COVID-related worries, thoughts, avoidance and probability estimates</p>
+<ul class="simple">
+<li><p>regresssion is somewhat messy, it might be better to explore the data a bit first</p></li>
+</ul>
+<div class="section" id="session-1-tbd">
+<h3>Session 1 (tbd)<a class="headerlink" href="#session-1-tbd" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sdf = df.loc[df[&quot;SESSIONID&quot;]==&quot;1.0&quot;,[&quot;sr_age&quot;,&quot;sr_gender&quot;, &quot;q6_work_home&quot;, &quot;q6_apply_soc_dist&quot;, &quot;q6_media_valence&quot;,</span>
+<span class="c1">#                                     &quot;stai_ta&quot;, &quot;stai_sa&quot;, &quot;sticsa_ta&quot;, </span>
+<span class="c1">#                                     &quot;sticsa_sa&quot;, &quot;bdi&quot;, &quot;cat&quot;, &quot;obj_severity&quot;, &quot;covid_worry&quot;, &quot;avoid_beh&quot;, </span>
+<span class="c1">#                                     &quot;avoid_anx&quot;, &quot;avoid_all&quot;, &quot;prob_est&quot;, &quot;GROUP&quot;]].dropna()</span>
+<span class="c1">#</span>
+<span class="c1">#md = smf.mixedlm(&quot;covid_worry ~ stai_ta*obj_severity&quot;, sdf, groups=sdf[&quot;GROUP&quot;])</span>
+<span class="c1">#mdf = md.fit()</span>
+<span class="c1">#print(mdf.summary())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploratory-plots">
+<h1>Exploratory plots<a class="headerlink" href="#exploratory-plots" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="clustering-timecourses">
+<h2>Clustering timecourses<a class="headerlink" href="#clustering-timecourses" title="Permalink to this headline">¶</a></h2>
+<p>In this anlysis, we group data into 5 clusters using k-Means. For now, the N of clusters is fixed, so 5 are <em>imposed</em>, however I will implement a model selection procedure which chooses the most likely amount of clusters.
+The plots are colored according to a secondary variable, in the first case, the color corresponds to trait anxiety. Such analysis should help us understand whether there is any meaningful clustering of participants and whether this maps onto their personality measures.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tslearn.utils</span> <span class="kn">import</span> <span class="n">to_time_series</span>
+<span class="kn">from</span> <span class="nn">tslearn.clustering</span> <span class="kn">import</span> <span class="n">TimeSeriesKMeans</span><span class="p">,</span> <span class="n">silhouette_score</span>
+
+<span class="k">def</span> <span class="nf">estimate_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s2">&quot;dtw&quot;</span><span class="p">):</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="s2">&quot;PROLIFICID&quot;</span><span class="p">]]</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;session&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="n">dep_var</span><span class="p">)</span><span class="o">.</span><span class="n">add_prefix</span><span class="p">(</span><span class="s1">&#39;sess&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    
+    <span class="c1"># turn to timeseries data type</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">to_time_series</span><span class="p">(</span><span class="n">tdf</span><span class="p">)</span>
+   
+    <span class="c1"># specify model</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">TimeSeriesKMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="n">metric</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#specify model</span>
+    <span class="c1"># fit model </span>
+    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span> <span class="c1">#fit</span>
+
+    <span class="c1">## not sur ewhat&#39;s the silhouette score</span>
+    <span class="c1">#labels = model.fit_predict(ts) # ??</span>
+    <span class="c1">#silhouette_score(ts, labels, metric=metric) #?? </span>
+
+    <span class="c1">#which cluster each participant belongs to - awesome!</span>
+    <span class="n">cl_ids</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span> 
+
+    <span class="c1">## back to pandas</span>
+    <span class="n">tdf</span><span class="p">[</span><span class="s2">&quot;cl&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cl_ids</span>
+    <span class="n">tdf</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">index</span>
+    
+    <span class="k">return</span> <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span>
+
+<span class="k">def</span> <span class="nf">visualize_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="n">huevar</span><span class="p">):</span>
+    <span class="c1"># df - overall data set </span>
+    <span class="c1"># tdf - data in wide format, output of estimate_clusters() </span>
+    <span class="c1"># model - estimated model</span>
+    <span class="c1"># dep_var - which variable are we clutering</span>
+    <span class="c1"># huevar - second variable to color clusters by</span>
+    
+    <span class="c1"># get information from the model</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">to_time_series</span><span class="p">(</span><span class="n">tdf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cl&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">]))</span>
+    <span class="n">cl_ids</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span> 
+    <span class="n">clusters</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">))</span>
+    <span class="p">(</span><span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cl_ids</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1"># where will labels be shown </span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">clusters</span><span class="p">[</span><span class="mi">18</span><span class="p">,:]</span>
+    <span class="n">me</span><span class="o">=</span><span class="n">tdf</span><span class="p">[[</span><span class="s2">&quot;sess18&quot;</span><span class="p">,</span> <span class="s2">&quot;cl&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;cl&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">yme</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">me</span><span class="p">[</span><span class="s2">&quot;sess18&quot;</span><span class="p">])</span>
+    
+    <span class="c1"># turn back to long format</span>
+    <span class="n">tdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;cl&quot;</span><span class="p">],</span> <span class="n">value_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sess&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># add anxiety to the dataset</span>
+    <span class="n">stdf</span> <span class="o">=</span> <span class="n">tdf</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;SESSIONID&quot;</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;15.0&quot;</span><span class="p">,[</span><span class="n">huevar</span><span class="p">,</span> <span class="s2">&quot;PROLIFICID&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;PROLIFICID&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">())</span>
+
+    <span class="c1"># Set your custom color palette</span>
+    <span class="n">pal</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket_r&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1">#get mean anxiety per bin</span>
+    <span class="n">anx_cluster</span> <span class="o">=</span> <span class="n">stdf</span><span class="p">[[</span><span class="s2">&quot;cl&quot;</span><span class="p">,</span> <span class="n">huevar</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;cl&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="c1"># create 10 bins based on min/max anxiety</span>
+    <span class="n">anx_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">anx_cluster</span><span class="p">[</span><span class="n">huevar</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">anx_cluster</span><span class="p">[</span><span class="n">huevar</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="c1"># get index of which anxity bin does each cluster belong to </span>
+    <span class="n">anx_idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">anx_cluster</span><span class="p">[</span><span class="n">huevar</span><span class="p">],</span><span class="n">anx_bins</span><span class="p">)</span>
+
+    <span class="n">newpal</span> <span class="o">=</span> <span class="p">[</span><span class="n">pal</span><span class="p">[</span><span class="n">ival</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">ival</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">anx_idx</span><span class="p">)]</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tdf</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;cl&quot;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">newpal</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="n">dep_var</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">anx_cluster</span><span class="o">.</span><span class="n">index</span><span class="p">),</span> <span class="n">unique</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">anx_cluster</span><span class="p">[</span><span class="n">huevar</span><span class="p">],</span> <span class="n">yme</span><span class="p">):</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;n=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">huevar</span><span class="o">+</span><span class="s2">&quot;=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span>
+                   <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">boxstyle</span><span class="o">=</span><span class="s2">&quot;round&quot;</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">newpal</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;obj_severity&quot;</span><span class="p">,</span> <span class="s2">&quot;covid_worry&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_beh&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_anx&quot;</span><span class="p">,</span> <span class="s2">&quot;avoid_all&quot;</span><span class="p">,</span> <span class="s2">&quot;prob_est&quot;</span><span class="p">]</span>
+<span class="c1"># qs not included because they start later in the project: &quot;covid_thoughts&quot;, &quot;skepticism&quot;</span>
+<span class="k">for</span> <span class="n">dep_var</span> <span class="ow">in</span> <span class="n">var</span><span class="p">:</span>
+    <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span> <span class="o">=</span> <span class="n">estimate_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">)</span>
+    <span class="n">visualize_clusters</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tdf</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">dep_var</span><span class="p">,</span> <span class="s2">&quot;stai_ta&quot;</span><span class="p">)</span>               
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cov_inferential_I_8_02.png" src="_images/cov_inferential_I_8_02.png" />
+<img alt="_images/cov_inferential_I_8_12.png" src="_images/cov_inferential_I_8_12.png" />
+<img alt="_images/cov_inferential_I_8_22.png" src="_images/cov_inferential_I_8_22.png" />
+<img alt="_images/cov_inferential_I_8_32.png" src="_images/cov_inferential_I_8_32.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3.7",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3.7'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="cov_final_overview.html" title="previous page">COVID Study - On-line part, Descriptives</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ondrej Zika<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

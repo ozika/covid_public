@@ -1,0 +1,1755 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Demographics Data &#8212; Longitudinal study on worries and COVID</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Selection bias lab experiments" href="cov_lab_demographics.html" />
+    <link rel="prev" title="Collapsing measures" href="cov_collapsing_measures.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Longitudinal study on worries and COVID</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing-page.html">
+   Landing page
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Intro
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_collapsing_measures.html">
+   Collapsing measures
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Online Demographics Data
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Demographics
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Online Demographics Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html">
+   Selection bias lab experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#age-and-gender">
+   Age and Gender
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#stai-trait-state-distributions-and-correlation">
+   STAI trait/state  distributions and correlation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#cross-correlations">
+   Cross Correlations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_lab_demographics.html#summary-table">
+   Summary Table
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Descriptives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html">
+   COVID Study - On-line part, Descriptives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#number-of-participants">
+   Number of participants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#basic-demographics">
+   basic demographics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#personality-measures">
+   personality measures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#covid-questionnaires">
+   COVID Questionnaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_final_overview.html#aggregate-measures-descriptives">
+   Aggregate measures descriptives
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_inferential_I.html">
+   Inferential stats: Part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cov_inferential_I.html#exploratory-plots">
+   Exploratory plots
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/cov_online_demographics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ozika/covid_public"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ozika/covid_public/issues/new?title=Issue%20on%20page%20%2Fcov_online_demographics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ozika/covid_public/gh-pages?urlpath=tree/content/cov_online_demographics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#loading-the-data">
+   Loading the data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session1">
+   Session1
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overall-distribution">
+     Overall Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary-table">
+     Summary Table
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session8">
+   Session8
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Overall Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-correlations-and-distributions">
+     Cross correlations and distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Summary Table
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#session15">
+   Session15
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Overall Distribution
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Cross correlations and distributions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Summary Table
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="online-demographics-data">
+<h1>Online Demographics Data<a class="headerlink" href="#online-demographics-data" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">ptitprince</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c82f77acf179</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">ptitprince</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.force_edgecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;../../&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks current directory</span>
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current working directory is:&quot;</span><span class="p">,</span> <span class="n">cwd</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current working directory is: C:\Users\katya\MPI
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="loading-the-data">
+<h2>Loading the data<a class="headerlink" href="#loading-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Loading the data for session 1</span>
+
+<span class="n">session1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/session1/clean_dataset.csv&#39;</span><span class="p">)</span>
+<span class="n">session1</span> <span class="o">=</span> <span class="n">session1</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">)</span>
+
+<span class="c1">#Loading the data for session 8</span>
+
+<span class="n">session8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/session8/clean_dataset.csv&#39;</span><span class="p">)</span>
+<span class="n">session8</span> <span class="o">=</span> <span class="n">session8</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">)</span>
+
+<span class="c1">#Loading the data for session 15</span>
+
+<span class="n">session15</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/session15/clean_dataset.csv&#39;</span><span class="p">)</span>
+<span class="n">session15</span> <span class="o">=</span> <span class="n">session15</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;PROLIFICID&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="session1">
+<h2>Session1<a class="headerlink" href="#session1" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session1</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 402 entries, 55d06fd334e9060012e5781c to 5eab262cef271f0e2a7e0075
+Data columns (total 80 columns):
+ #   Column                      Non-Null Count  Dtype  
+---  ------                      --------------  -----  
+ 0   submitdate                  400 non-null    object 
+ 1   lastpage                    402 non-null    int64  
+ 2   SESSIONID                   402 non-null    float64
+ 3   GROUP                       402 non-null    object 
+ 4   sr_age                      400 non-null    float64
+ 5   sr_gender                   396 non-null    object 
+ 6   sr_postcode                 402 non-null    object 
+ 7   q6_me_inf                   397 non-null    float64
+ 8   q6_close_person_inf         397 non-null    float64
+ 9   q6_close_person_died        397 non-null    float64
+ 10  q6_econ_impact_me           402 non-null    float64
+ 11  q6_econ_impact_closep       402 non-null    float64
+ 12  q6_work_home                402 non-null    float64
+ 13  q6_apply_soc_dist           402 non-null    float64
+ 14  q6_risk_group               402 non-null    float64
+ 15  q6_risk_group_closep        402 non-null    float64
+ 16  q6_houshold_membs           402 non-null    int64  
+ 17  q6_media_freq               402 non-null    object 
+ 18  q6_media_name               402 non-null    object 
+ 19  q6_media_valence            402 non-null    float64
+ 20  q7_worry_infected           402 non-null    float64
+ 21  q7_worry_die                402 non-null    float64
+ 22  q7_worry_econ_impact        402 non-null    float64
+ 23  q7_worry_sthg_bad           402 non-null    float64
+ 24  q7_worry_insuf_help         402 non-null    float64
+ 25  q7_worry_closep_inf         402 non-null    float64
+ 26  q7_closep_die               402 non-null    float64
+ 27  q7_worry_shortage           402 non-null    float64
+ 28  q7_period_rel_danger        402 non-null    float64
+ 29  q7_period_rel_safety        402 non-null    float64
+ 30  q7_initial_surprise         402 non-null    float64
+ 31  q7_initial_scared           402 non-null    float64
+ 32  q7_people_overreact         402 non-null    float64
+ 33  q7_vir_not_as_dangerous     402 non-null    float64
+ 34  q7_vir_made_lab             402 non-null    float64
+ 35  q7_inf_worry_frequency      402 non-null    object 
+ 36  q7_diff_beh_freq            402 non-null    object 
+ 37  q7_beh_wash_hands           402 non-null    float64
+ 38  q7_beh_avoid_ppl            402 non-null    float64
+ 39  q7_beh_avoid_public_places  402 non-null    float64
+ 40  q7_anx_touching_surf        402 non-null    float64
+ 41  q7_anx_stand_close_to_ppl   402 non-null    float64
+ 42  q7_anx_eating_food_out      402 non-null    float64
+ 43  q7_anx_public_transp        402 non-null    float64
+ 44  q7_anx_visit_doc            402 non-null    float64
+ 45  q7_anx_another_beh          402 non-null    float64
+ 46  q8_prob_inf_me              402 non-null    float64
+ 47  q8_prob_die_me              402 non-null    float64
+ 48  q8_prob_econ_imp_me         402 non-null    float64
+ 49  q8_prob_inf_closep          402 non-null    float64
+ 50  q8_prob_die_closep          402 non-null    float64
+ 51  q8_prob_inf_avgp            402 non-null    float64
+ 52  q8_t_pand_end               402 non-null    object 
+ 53  q8_t_life_back_norm         402 non-null    object 
+ 54  q8_secondw                  402 non-null    float64
+ 55  q8_t_secondw_when           297 non-null    object 
+ 56  q8_t_econ_back_norm         402 non-null    object 
+ 57  q6_media_freq_num           402 non-null    float64
+ 58  q7_inf_worry_frequency_num  402 non-null    float64
+ 59  q7_diff_beh_freq_num        402 non-null    float64
+ 60  q8_t_pand_end_days          400 non-null    float64
+ 61  q8_t_life_back_norm_days    400 non-null    float64
+ 62  q8_t_secondw_when_days      295 non-null    float64
+ 63  q8_t_econ_back_norm_days    400 non-null    float64
+ 64  covid_worry                 402 non-null    float64
+ 65  covid_avoidance_beh         402 non-null    float64
+ 66  covid_spec_anxiety          402 non-null    float64
+ 67  covid_prob_estimates        402 non-null    float64
+ 68  covid_end_est               400 non-null    float64
+ 69  stai_ta                     401 non-null    float64
+ 70  stai_sa                     402 non-null    float64
+ 71  sticsa_ta                   402 non-null    float64
+ 72  sticsa_cog_ta               402 non-null    float64
+ 73  sticsa_som_ta               402 non-null    float64
+ 74  sticsa_sa                   401 non-null    float64
+ 75  sticsa_cog_sa               401 non-null    float64
+ 76  sticsa_som_sa               401 non-null    float64
+ 77  bdi                         402 non-null    float64
+ 78  cat                         401 non-null    float64
+ 79  PID                         402 non-null    object 
+dtypes: float64(65), int64(2), object(13)
+memory usage: 270.6+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="overall-distribution">
+<h3>Overall Distribution<a class="headerlink" href="#overall-distribution" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ivs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">];</span> 
+<span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STAI trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STAI state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastophizing&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session1</span><span class="p">[</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UK&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;crest&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session1</span><span class="p">[</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BE&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;magma&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
+STAI state anxiety
+STICSA trait anxiety
+STICSA state anxiety
+BDI
+Catastophizing
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_10_13.png" src="_images/cov_online_demographics_10_13.png" />
+<img alt="_images/cov_online_demographics_10_23.png" src="_images/cov_online_demographics_10_23.png" />
+<img alt="_images/cov_online_demographics_10_33.png" src="_images/cov_online_demographics_10_33.png" />
+<img alt="_images/cov_online_demographics_10_43.png" src="_images/cov_online_demographics_10_43.png" />
+<img alt="_images/cov_online_demographics_10_53.png" src="_images/cov_online_demographics_10_53.png" />
+<img alt="_images/cov_online_demographics_10_63.png" src="_images/cov_online_demographics_10_63.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span> <span class="o">=</span> <span class="n">session1</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">]]</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">sdf</span><span class="p">,</span> <span class="n">corner</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cov_online_demographics_11_03.png" src="_images/cov_online_demographics_11_03.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">session1</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">pval</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="o">*</span><span class="n">rho</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pval</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;*&#39;</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">]))</span>
+<span class="n">rho</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stai_ta</th>
+      <th>stai_sa</th>
+      <th>sticsa_ta</th>
+      <th>sticsa_sa</th>
+      <th>bdi</th>
+      <th>cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>stai_ta</th>
+      <td>1.0***</td>
+      <td>0.75***</td>
+      <td>0.756***</td>
+      <td>0.722***</td>
+      <td>0.813***</td>
+      <td>0.778***</td>
+    </tr>
+    <tr>
+      <th>stai_sa</th>
+      <td>0.75***</td>
+      <td>1.0***</td>
+      <td>0.64***</td>
+      <td>0.719***</td>
+      <td>0.692***</td>
+      <td>0.643***</td>
+    </tr>
+    <tr>
+      <th>sticsa_ta</th>
+      <td>0.756***</td>
+      <td>0.64***</td>
+      <td>1.0***</td>
+      <td>0.841***</td>
+      <td>0.711***</td>
+      <td>0.752***</td>
+    </tr>
+    <tr>
+      <th>sticsa_sa</th>
+      <td>0.722***</td>
+      <td>0.719***</td>
+      <td>0.841***</td>
+      <td>1.0***</td>
+      <td>0.716***</td>
+      <td>0.726***</td>
+    </tr>
+    <tr>
+      <th>bdi</th>
+      <td>0.813***</td>
+      <td>0.692***</td>
+      <td>0.711***</td>
+      <td>0.716***</td>
+      <td>1.0***</td>
+      <td>0.723***</td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td>0.778***</td>
+      <td>0.643***</td>
+      <td>0.752***</td>
+      <td>0.726***</td>
+      <td>0.723***</td>
+      <td>1.0***</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_14_13.png" src="_images/cov_online_demographics_14_13.png" />
+</div>
+</div>
+</div>
+<div class="section" id="summary-table">
+<h3>Summary Table<a class="headerlink" href="#summary-table" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dec</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#number of decimal points</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;SD&#39;</span><span class="p">]])</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)]],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> 
+                  <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">]])</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session1</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session1</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)]],</span>
+                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">header1</span><span class="p">)</span>
+
+<span class="n">session1_online_demographics</span> <span class="o">=</span> <span class="n">summary</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+
+<span class="n">session1_online_demographics</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;output/session1_online_demographics.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session1_online_demographics</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">Male</th>
+      <th colspan="3" halign="left">Female</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gender</th>
+      <td></td>
+      <td>38.64 %</td>
+      <td></td>
+      <td></td>
+      <td>61.36 %</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>28.11</td>
+      <td></td>
+      <td>5.98</td>
+      <td>27.30</td>
+      <td></td>
+      <td>5.79</td>
+      <td>0.183</td>
+    </tr>
+    <tr>
+      <th>Trait Anxiety (STAIT)</th>
+      <td>43.84</td>
+      <td></td>
+      <td>12.61</td>
+      <td>46.84</td>
+      <td></td>
+      <td>11.73</td>
+      <td>0.016</td>
+    </tr>
+    <tr>
+      <th>State Anxiety (STAIS)</th>
+      <td>37.58</td>
+      <td></td>
+      <td>12.05</td>
+      <td>42.55</td>
+      <td></td>
+      <td>12.34</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
+      <td>33.11</td>
+      <td></td>
+      <td>10.23</td>
+      <td>37.15</td>
+      <td></td>
+      <td>10.99</td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <th>State Cognitive and Somatic Anxiety (STICSAS)</th>
+      <td>31.07</td>
+      <td></td>
+      <td>10.10</td>
+      <td>33.69</td>
+      <td></td>
+      <td>10.71</td>
+      <td>0.016</td>
+    </tr>
+    <tr>
+      <th>Beck Depression Inventory (BDI)</th>
+      <td>10.85</td>
+      <td></td>
+      <td>9.62</td>
+      <td>12.81</td>
+      <td></td>
+      <td>9.22</td>
+      <td>0.044</td>
+    </tr>
+    <tr>
+      <th>Catastrophizing</th>
+      <td>28.46</td>
+      <td></td>
+      <td>16.77</td>
+      <td>33.85</td>
+      <td></td>
+      <td>16.73</td>
+      <td>0.002</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="session8">
+<h2>Session8<a class="headerlink" href="#session8" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session8</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 330 entries, 5cae6a77b38ea60016e54889 to 5cf122496b3f1e0017aaebc5
+Data columns (total 99 columns):
+ #   Column                              Non-Null Count  Dtype  
+---  ------                              --------------  -----  
+ 0   submitdate                          329 non-null    object 
+ 1   lastpage                            330 non-null    int64  
+ 2   SESSIONID                           330 non-null    int64  
+ 3   GROUP                               330 non-null    object 
+ 4   sr_age                              329 non-null    float64
+ 5   sr_gender                           324 non-null    object 
+ 6   sr_postcode                         330 non-null    object 
+ 7   q6_me_inf                           330 non-null    float64
+ 8   q6_close_person_inf                 330 non-null    float64
+ 9   q6_close_person_died                330 non-null    float64
+ 10  q6_diagnosis_type                   31 non-null     object 
+ 11  q6_econ_impact_me                   330 non-null    float64
+ 12  q6_econ_impact_closep               330 non-null    float64
+ 13  q6_work_home                        330 non-null    float64
+ 14  q6_apply_soc_dist                   330 non-null    float64
+ 15  q6_risk_group                       330 non-null    float64
+ 16  q6_risk_group_closep                330 non-null    float64
+ 17  q6_houshold_membs                   330 non-null    int64  
+ 18  q6_media_freq                       330 non-null    object 
+ 19  q6_media_name                       330 non-null    object 
+ 20  q6_media_valence                    330 non-null    float64
+ 21  q8_est_daily_cases                  325 non-null    float64
+ 22  q7_memory_initial_worry             330 non-null    float64
+ 23  q7_memory_initial_something_bad     330 non-null    float64
+ 24  q8_memory_prob_infected             330 non-null    float64
+ 25  q8_memory_prob_avg_person_infected  330 non-null    float64
+ 26  q7_thinkof_nocases                  298 non-null    float64
+ 27  q7_thinkof_nodeaths                 303 non-null    float64
+ 28  q7_thinkof_strain_healthsys         294 non-null    float64
+ 29  q7_thinkof_mishandled               295 non-null    float64
+ 30  q7_thinkof_famimpact                300 non-null    float64
+ 31  q7_thinkof_jobsimpact               301 non-null    float64
+ 32  q7_thinkof_safety                   298 non-null    float64
+ 33  q7_thinkof_wantitover               308 non-null    float64
+ 34  q7_thinkof_vaccine                  300 non-null    float64
+ 35  q7_worry_infected                   330 non-null    float64
+ 36  q7_worry_die                        330 non-null    float64
+ 37  q7_worry_econ_impact                330 non-null    float64
+ 38  q7_worry_sthg_bad                   330 non-null    float64
+ 39  q7_worry_insuf_help                 330 non-null    float64
+ 40  q7_worry_closep_inf                 330 non-null    float64
+ 41  q7_closep_die                       330 non-null    float64
+ 42  q7_worry_shortage                   330 non-null    float64
+ 43  q7_period_rel_danger                330 non-null    float64
+ 44  q7_period_rel_safety                330 non-null    float64
+ 45  q7_initial_surprise                 330 non-null    float64
+ 46  q7_initial_scared                   330 non-null    float64
+ 47  q7_people_overreact                 330 non-null    float64
+ 48  q7_vir_not_as_dangerous             330 non-null    float64
+ 49  q7_vir_made_lab                     330 non-null    float64
+ 50  q7_inf_worry_frequency              330 non-null    object 
+ 51  q7_diff_beh_freq                    330 non-null    object 
+ 52  q7_beh_wash_hands                   330 non-null    float64
+ 53  q7_beh_avoid_ppl                    330 non-null    float64
+ 54  q7_beh_avoid_public_places          330 non-null    float64
+ 55  q7_anx_touching_surf                330 non-null    float64
+ 56  q7_anx_stand_close_to_ppl           330 non-null    float64
+ 57  q7_anx_eating_food_out              330 non-null    float64
+ 58  q7_anx_public_transp                330 non-null    float64
+ 59  q7_anx_visit_doc                    330 non-null    float64
+ 60  q7_anx_another_beh                  330 non-null    float64
+ 61  q7_angry_cough                      330 non-null    float64
+ 62  q7_scared_coughed                   330 non-null    float64
+ 63  q7_covid_hoax                       330 non-null    float64
+ 64  q8_prob_inf_me                      330 non-null    float64
+ 65  q8_prob_die_me                      330 non-null    float64
+ 66  q8_prob_econ_imp_me                 330 non-null    float64
+ 67  q8_prob_inf_closep                  330 non-null    float64
+ 68  q8_prob_die_closep                  330 non-null    float64
+ 69  q8_prob_inf_avgp                    330 non-null    float64
+ 70  q8_t_pand_end                       330 non-null    object 
+ 71  q8_t_life_back_norm                 330 non-null    object 
+ 72  q8_second_wave_starting             330 non-null    object 
+ 73  q8_secondw                          330 non-null    float64
+ 74  q8_t_secondw_when                   267 non-null    object 
+ 75  q8_t_econ_back_norm                 330 non-null    object 
+ 76  q6_media_freq_num                   330 non-null    float64
+ 77  q7_inf_worry_frequency_num          330 non-null    float64
+ 78  q7_diff_beh_freq_num                330 non-null    float64
+ 79  q8_t_pand_end_days                  329 non-null    float64
+ 80  q8_t_life_back_norm_days            329 non-null    float64
+ 81  q8_t_secondw_when_days              266 non-null    float64
+ 82  q8_t_econ_back_norm_days            329 non-null    float64
+ 83  covid_worry                         330 non-null    float64
+ 84  covid_avoidance_beh                 330 non-null    float64
+ 85  covid_spec_anxiety                  330 non-null    float64
+ 86  covid_prob_estimates                330 non-null    float64
+ 87  covid_end_est                       329 non-null    float64
+ 88  stai_ta                             330 non-null    float64
+ 89  stai_sa                             329 non-null    float64
+ 90  sticsa_ta                           329 non-null    float64
+ 91  sticsa_cog_ta                       329 non-null    float64
+ 92  sticsa_som_ta                       329 non-null    float64
+ 93  sticsa_sa                           329 non-null    float64
+ 94  sticsa_cog_sa                       329 non-null    float64
+ 95  sticsa_som_sa                       329 non-null    float64
+ 96  bdi                                 329 non-null    float64
+ 97  cat                                 329 non-null    float64
+ 98  PID                                 330 non-null    object 
+dtypes: float64(81), int64(3), object(15)
+memory usage: 257.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Overall Distribution<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ivs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">];</span> 
+<span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STAI trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STAI state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastophizing&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session8</span><span class="p">[</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UK&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;icefire&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session8</span><span class="p">[</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BE&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;viridis&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
+STAI state anxiety
+STICSA trait anxiety
+STICSA state anxiety
+BDI
+Catastophizing
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_21_13.png" src="_images/cov_online_demographics_21_13.png" />
+<img alt="_images/cov_online_demographics_21_23.png" src="_images/cov_online_demographics_21_23.png" />
+<img alt="_images/cov_online_demographics_21_33.png" src="_images/cov_online_demographics_21_33.png" />
+<img alt="_images/cov_online_demographics_21_43.png" src="_images/cov_online_demographics_21_43.png" />
+<img alt="_images/cov_online_demographics_21_53.png" src="_images/cov_online_demographics_21_53.png" />
+<img alt="_images/cov_online_demographics_21_63.png" src="_images/cov_online_demographics_21_63.png" />
+</div>
+</div>
+</div>
+<div class="section" id="cross-correlations-and-distributions">
+<h3>Cross correlations and distributions<a class="headerlink" href="#cross-correlations-and-distributions" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span> <span class="o">=</span> <span class="n">session8</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">]]</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">sdf</span><span class="p">,</span> <span class="n">corner</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cov_online_demographics_23_03.png" src="_images/cov_online_demographics_23_03.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">session8</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">pval</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="o">*</span><span class="n">rho</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pval</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;*&#39;</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">]))</span>
+<span class="n">rho</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stai_ta</th>
+      <th>stai_sa</th>
+      <th>sticsa_ta</th>
+      <th>sticsa_sa</th>
+      <th>bdi</th>
+      <th>cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>stai_ta</th>
+      <td>1.0***</td>
+      <td>0.799***</td>
+      <td>0.757***</td>
+      <td>0.725***</td>
+      <td>0.822***</td>
+      <td>0.797***</td>
+    </tr>
+    <tr>
+      <th>stai_sa</th>
+      <td>0.799***</td>
+      <td>1.0***</td>
+      <td>0.7***</td>
+      <td>0.76***</td>
+      <td>0.756***</td>
+      <td>0.642***</td>
+    </tr>
+    <tr>
+      <th>sticsa_ta</th>
+      <td>0.757***</td>
+      <td>0.7***</td>
+      <td>1.0***</td>
+      <td>0.893***</td>
+      <td>0.751***</td>
+      <td>0.696***</td>
+    </tr>
+    <tr>
+      <th>sticsa_sa</th>
+      <td>0.725***</td>
+      <td>0.76***</td>
+      <td>0.893***</td>
+      <td>1.0***</td>
+      <td>0.764***</td>
+      <td>0.685***</td>
+    </tr>
+    <tr>
+      <th>bdi</th>
+      <td>0.822***</td>
+      <td>0.756***</td>
+      <td>0.751***</td>
+      <td>0.764***</td>
+      <td>1.0***</td>
+      <td>0.709***</td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td>0.797***</td>
+      <td>0.642***</td>
+      <td>0.696***</td>
+      <td>0.685***</td>
+      <td>0.709***</td>
+      <td>1.0***</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;magma&#39;</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_26_13.png" src="_images/cov_online_demographics_26_13.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Summary Table<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;SD&#39;</span><span class="p">]])</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)]],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> 
+                  <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">]])</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session8</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session8</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)]],</span>
+                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">header1</span><span class="p">)</span>
+
+<span class="n">session8_online_demographics</span> <span class="o">=</span> <span class="n">summary</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+
+<span class="n">session8_online_demographics</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;output/session8_online_demographics.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session8_online_demographics</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">Male</th>
+      <th colspan="3" halign="left">Female</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gender</th>
+      <td></td>
+      <td>37.65 %</td>
+      <td></td>
+      <td></td>
+      <td>62.35 %</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>28.91</td>
+      <td></td>
+      <td>5.74</td>
+      <td>28.12</td>
+      <td></td>
+      <td>5.91</td>
+      <td>0.239</td>
+    </tr>
+    <tr>
+      <th>Trait Anxiety (STAIT)</th>
+      <td>41.56</td>
+      <td></td>
+      <td>12.01</td>
+      <td>45.41</td>
+      <td></td>
+      <td>12.44</td>
+      <td>0.007</td>
+    </tr>
+    <tr>
+      <th>State Anxiety (STAIS)</th>
+      <td>35.74</td>
+      <td></td>
+      <td>12.45</td>
+      <td>38.77</td>
+      <td></td>
+      <td>13.01</td>
+      <td>0.040</td>
+    </tr>
+    <tr>
+      <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
+      <td>30.20</td>
+      <td></td>
+      <td>10.44</td>
+      <td>33.71</td>
+      <td></td>
+      <td>11.35</td>
+      <td>0.006</td>
+    </tr>
+    <tr>
+      <th>State Cognitive and Somatic Anxiety (STICSAS)</th>
+      <td>28.58</td>
+      <td></td>
+      <td>10.09</td>
+      <td>30.93</td>
+      <td></td>
+      <td>10.56</td>
+      <td>0.050</td>
+    </tr>
+    <tr>
+      <th>Beck Depression Inventory (BDI)</th>
+      <td>10.29</td>
+      <td></td>
+      <td>10.19</td>
+      <td>12.10</td>
+      <td></td>
+      <td>10.35</td>
+      <td>0.127</td>
+    </tr>
+    <tr>
+      <th>Catastrophizing</th>
+      <td>25.98</td>
+      <td></td>
+      <td>17.33</td>
+      <td>31.44</td>
+      <td></td>
+      <td>18.35</td>
+      <td>0.009</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="session15">
+<h2>Session15<a class="headerlink" href="#session15" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session15</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 300 entries, 5e7b9ed640bdc91aca715def to 5ea56ecd5d022354cb1c061e
+Columns: 110 entries, submitdate to PID
+dtypes: float64(38), int64(54), object(18)
+memory usage: 260.2+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>Overall Distribution<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ivs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">];</span> 
+<span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STAI trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STAI state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastophizing&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session15</span><span class="p">[</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UK&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;Blues&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">session15</span><span class="p">[</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;GROUP&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;BE&#39;</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;YlOrBr&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;BE&#39;</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
+STAI state anxiety
+STICSA trait anxiety
+STICSA state anxiety
+BDI
+Catastophizing
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_33_13.png" src="_images/cov_online_demographics_33_13.png" />
+<img alt="_images/cov_online_demographics_33_23.png" src="_images/cov_online_demographics_33_23.png" />
+<img alt="_images/cov_online_demographics_33_33.png" src="_images/cov_online_demographics_33_33.png" />
+<img alt="_images/cov_online_demographics_33_43.png" src="_images/cov_online_demographics_33_43.png" />
+<img alt="_images/cov_online_demographics_33_53.png" src="_images/cov_online_demographics_33_53.png" />
+<img alt="_images/cov_online_demographics_33_63.png" src="_images/cov_online_demographics_33_63.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Cross correlations and distributions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span> <span class="o">=</span> <span class="n">session15</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">]]</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">sdf</span><span class="p">,</span> <span class="n">corner</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s1">&#39;GROUP&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cov_online_demographics_35_03.png" src="_images/cov_online_demographics_35_03.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">session15</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">pval</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="o">*</span><span class="n">rho</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pval</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;*&#39;</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">]))</span>
+<span class="n">rho</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stai_ta</th>
+      <th>stai_sa</th>
+      <th>sticsa_ta</th>
+      <th>sticsa_sa</th>
+      <th>bdi</th>
+      <th>cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>stai_ta</th>
+      <td>1.0***</td>
+      <td>0.815***</td>
+      <td>0.747***</td>
+      <td>0.693***</td>
+      <td>0.809***</td>
+      <td>0.781***</td>
+    </tr>
+    <tr>
+      <th>stai_sa</th>
+      <td>0.815***</td>
+      <td>1.0***</td>
+      <td>0.719***</td>
+      <td>0.771***</td>
+      <td>0.762***</td>
+      <td>0.663***</td>
+    </tr>
+    <tr>
+      <th>sticsa_ta</th>
+      <td>0.747***</td>
+      <td>0.719***</td>
+      <td>1.0***</td>
+      <td>0.893***</td>
+      <td>0.76***</td>
+      <td>0.747***</td>
+    </tr>
+    <tr>
+      <th>sticsa_sa</th>
+      <td>0.693***</td>
+      <td>0.771***</td>
+      <td>0.893***</td>
+      <td>1.0***</td>
+      <td>0.748***</td>
+      <td>0.69***</td>
+    </tr>
+    <tr>
+      <th>bdi</th>
+      <td>0.809***</td>
+      <td>0.762***</td>
+      <td>0.76***</td>
+      <td>0.748***</td>
+      <td>1.0***</td>
+      <td>0.736***</td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td>0.781***</td>
+      <td>0.663***</td>
+      <td>0.747***</td>
+      <td>0.69***</td>
+      <td>0.736***</td>
+      <td>1.0***</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;icefire&#39;</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/cov_online_demographics_38_13.png" src="_images/cov_online_demographics_38_13.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Summary Table<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;SD&#39;</span><span class="p">]])</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)]],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> 
+                  <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">]])</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">session15</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">session15</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span> <span class="n">nan_policy</span><span class="o">=</span><span class="s1">&#39;omit&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)]],</span>
+                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">header1</span><span class="p">)</span>
+
+<span class="n">session15_online_demographics</span> <span class="o">=</span> <span class="n">summary</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+
+<span class="n">session15_online_demographics</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;output/session15_online_demographics.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">session15_online_demographics</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">Male</th>
+      <th colspan="3" halign="left">Female</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gender</th>
+      <td></td>
+      <td>40.55 %</td>
+      <td></td>
+      <td></td>
+      <td>59.45 %</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>29.57</td>
+      <td></td>
+      <td>5.70</td>
+      <td>28.84</td>
+      <td></td>
+      <td>5.78</td>
+      <td>0.289</td>
+    </tr>
+    <tr>
+      <th>Trait Anxiety (STAIT)</th>
+      <td>41.17</td>
+      <td></td>
+      <td>13.00</td>
+      <td>44.91</td>
+      <td></td>
+      <td>13.30</td>
+      <td>0.018</td>
+    </tr>
+    <tr>
+      <th>State Anxiety (STAIS)</th>
+      <td>35.14</td>
+      <td></td>
+      <td>12.05</td>
+      <td>38.45</td>
+      <td></td>
+      <td>12.51</td>
+      <td>0.025</td>
+    </tr>
+    <tr>
+      <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
+      <td>29.45</td>
+      <td></td>
+      <td>10.72</td>
+      <td>32.69</td>
+      <td></td>
+      <td>10.96</td>
+      <td>0.013</td>
+    </tr>
+    <tr>
+      <th>State Cognitive and Somatic Anxiety (STICSAS)</th>
+      <td>27.64</td>
+      <td></td>
+      <td>9.75</td>
+      <td>29.88</td>
+      <td></td>
+      <td>10.05</td>
+      <td>0.061</td>
+    </tr>
+    <tr>
+      <th>Beck Depression Inventory (BDI)</th>
+      <td>9.55</td>
+      <td></td>
+      <td>9.56</td>
+      <td>12.12</td>
+      <td></td>
+      <td>10.27</td>
+      <td>0.031</td>
+    </tr>
+    <tr>
+      <th>Catastrophizing</th>
+      <td>23.75</td>
+      <td></td>
+      <td>16.98</td>
+      <td>31.50</td>
+      <td></td>
+      <td>18.64</td>
+      <td>0.000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="cov_collapsing_measures.html" title="previous page">Collapsing measures</a>
+    <a class='right-next' id="next-link" href="cov_lab_demographics.html" title="next page">Selection bias lab experiments</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ondrej Zika<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

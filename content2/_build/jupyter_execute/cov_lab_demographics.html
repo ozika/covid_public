@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selection bias lab experiments &#8212; Longitudinal study on worries and COVID</title>
+    
+  <link rel="stylesheet" href="../../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">Longitudinal study on worries and COVID</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../landing-page.html">
+   Landing page
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Intro
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_collapsing_measures.html">
+   Collapsing measures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_online_demographics.html">
+   Online Demographics Data
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Demographics
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_online_demographics.html">
+   Online Demographics Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_lab_demographics.html">
+   Selection bias lab experiments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_lab_demographics.html#age-and-gender">
+   Age and Gender
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_lab_demographics.html#stai-trait-state-distributions-and-correlation">
+   STAI trait/state  distributions and correlation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_lab_demographics.html#cross-correlations">
+   Cross Correlations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_lab_demographics.html#summary-table">
+   Summary Table
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Descriptives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html">
+   COVID Study - On-line part, Descriptives
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html#number-of-participants">
+   Number of participants
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html#basic-demographics">
+   basic demographics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html#personality-measures">
+   personality measures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html#covid-questionnaires">
+   COVID Questionnaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_final_overview.html#aggregate-measures-descriptives">
+   Aggregate measures descriptives
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Analysis
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_inferential_I.html">
+   Inferential stats: Part I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../cov_inferential_I.html#exploratory-plots">
+   Exploratory plots
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/content2/_build/jupyter_execute/cov_lab_demographics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ozika/covid_public"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ozika/covid_public/issues/new?title=Issue%20on%20page%20%2Fcontent2/_build/jupyter_execute/cov_lab_demographics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/ozika/covid_public/gh-pages?urlpath=tree/content/content2/_build/jupyter_execute/cov_lab_demographics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Selection bias lab experiments
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#age-and-gender">
+   Age and Gender
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stai-trait-state-distributions-and-correlation">
+   STAI trait/state  distributions and correlation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#overall-distribution">
+     Overall distribution
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-correlations-and-distributions">
+     Cross correlations and distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cross-correlations">
+   Cross Correlations
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-table">
+   Summary Table
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#response-distributions">
+     Response distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <h1>Table of Contents<span class="tocSkip"></span></h1>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Selection-bias-lab-experiments" data-toc-modified-id="Selection-bias-lab-experiments-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Selection bias lab experiments</a></span><ul class="toc-item"><li><span><a href="#Response-distributions" data-toc-modified-id="Response-distributions-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Response distributions</a></span></li></ul></li></ul></div><div class="section" id="selection-bias-lab-experiments">
+<h1>Selection bias lab experiments<a class="headerlink" href="#selection-bias-lab-experiments" title="Permalink to this headline">¶</a></h1>
+<p>From the on-line sample of 81 Berlin participants we sent two emails:</p>
+<ol class="simple">
+<li><p>Email with general inquiry, listing how long the session will be (2 hrs) and how much will they be paid (25-31 eur)</p></li>
+<li><p>If they successfully answered to the first one another email was sent with details of the study (electrical shocks)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">ptitprince</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">62</span><span class="n">b0bcda2b22</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">ptitprince</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;patch.force_edgecolor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;../../&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Checks current directory</span>
+<span class="n">cwd</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Current working directory is:&quot;</span><span class="p">,</span> <span class="n">cwd</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current working directory is: C:\Users\katya\MPI
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Load email response data </span>
+<span class="n">em_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/email_response_data.csv&#39;</span><span class="p">)</span>
+<span class="n">em_data</span> <span class="o">=</span> <span class="n">em_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;subID&#39;</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1">## Load status and the date of participation</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/task_data/visit1/status_date.csv&#39;</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;subID&#39;</span><span class="p">)</span>
+<span class="n">em_data</span> <span class="o">=</span> <span class="n">em_data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
+
+
+<span class="c1">## Load lab ID and prolific ID link db</span>
+<span class="n">link_db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/berlin_lab_participants.csv&#39;</span><span class="p">)</span>
+<span class="n">link_db</span> <span class="o">=</span> <span class="n">link_db</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">link_db</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">intersection</span><span class="p">([</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;subID&#39;</span><span class="p">])]</span>
+<span class="n">link_db</span> <span class="o">=</span> <span class="n">link_db</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;subID&#39;</span><span class="p">)</span>
+
+<span class="c1">## Load pooled anxiety data </span>
+<span class="n">an_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;output/questionnaires/pooled_anxiety.csv&#39;</span><span class="p">)</span>
+<span class="n">an_data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">an_data</span><span class="o">.</span><span class="n">pid</span>
+
+<span class="c1">## Load covid-related responses from session 12</span>
+<span class="n">s12_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/session15/clean_dataset_reduced.csv&#39;</span><span class="p">)</span>
+<span class="n">s12_data</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">s12_data</span><span class="o">.</span><span class="n">PROLIFICID</span>
+<span class="n">s12_data</span> <span class="o">=</span> <span class="n">s12_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s12_data</span><span class="o">.</span><span class="n">GROUP</span><span class="o">==</span><span class="s1">&#39;BE&#39;</span><span class="p">,:]</span>
+
+
+<span class="c1">#### merge data to one data set </span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">em_data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">link_db</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span><span class="n">drop</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">an_data</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">s12_data</span><span class="p">)</span>
+
+<span class="c1">## adjust data </span>
+<span class="n">data</span><span class="o">.</span><span class="n">email2</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">email2</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">8</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+<span class="n">data</span><span class="o">.</span><span class="n">email2</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">email2</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">})</span>
+<span class="n">data</span><span class="o">.</span><span class="n">email1</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">email1</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">})</span>
+<span class="n">data</span><span class="o">.</span><span class="n">email1</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">email1</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;No&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Yes&quot;</span><span class="p">})</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;output/selection_bias_data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 81 entries, 5e99fbca965d4307124a67a5 to 5ea9bb87b6145a0edc839cc2
+Data columns (total 36 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   subID                 81 non-null     object 
+ 1   email1                81 non-null     object 
+ 2   email1_date           44 non-null     object 
+ 3   email2                44 non-null     object 
+ 4   email2_date           29 non-null     object 
+ 5   status                81 non-null     object 
+ 6   participation_date    51 non-null     object 
+ 7   ID                    81 non-null     object 
+ 8   Unnamed: 0            81 non-null     object 
+ 9   ta_s1                 81 non-null     int64  
+ 10  ta_s8                 79 non-null     float64
+ 11  ta_overall            81 non-null     float64
+ 12  stta_s1               81 non-null     int64  
+ 13  stta_s8               79 non-null     float64
+ 14  stta_overall          81 non-null     float64
+ 15  pid                   81 non-null     object 
+ 16  PROLIFICID            46 non-null     object 
+ 17  GROUP                 46 non-null     object 
+ 18  sr_age                46 non-null     float64
+ 19  sr_gender             46 non-null     object 
+ 20  q6_me_inf             46 non-null     float64
+ 21  q6_close_person_inf   46 non-null     float64
+ 22  q6_close_person_died  46 non-null     float64
+ 23  q6_media_valence      46 non-null     float64
+ 24  covid_worry           46 non-null     float64
+ 25  covid_avoidance_beh   46 non-null     float64
+ 26  covid_spec_anxiety    46 non-null     float64
+ 27  covid_prob_estimates  46 non-null     float64
+ 28  covid_end_est         46 non-null     float64
+ 29  stai_ta               46 non-null     float64
+ 30  stai_sa               46 non-null     float64
+ 31  sticsa_ta             46 non-null     float64
+ 32  sticsa_sa             46 non-null     float64
+ 33  bdi                   46 non-null     float64
+ 34  cat                   46 non-null     float64
+ 35  PROLIFICID.1          46 non-null     object 
+dtypes: float64(20), int64(2), object(14)
+memory usage: 25.5+ KB
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="age-and-gender">
+<h1>Age and Gender<a class="headerlink" href="#age-and-gender" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;sr_gender&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;sr_age&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;mako&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;sr_gender&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;sr_age&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">palette</span> <span class="o">=</span> <span class="s1">&#39;mako&#39;</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">jitter</span> <span class="o">=</span> <span class="kc">True</span> <span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">pointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;sr_age&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=.</span><span class="mi">532</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;mako&#39;</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=.</span><span class="mi">75</span><span class="p">,</span> <span class="n">ci</span><span class="o">=</span><span class="mi">68</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]);</span>
+<span class="k">for</span> <span class="n">violin</span><span class="p">,</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[::</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">]):</span>
+    <span class="n">violin</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="n">alpha</span><span class="p">)</span>
+    
+<span class="c1"># replace labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Age&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Sex&quot;</span><span class="p">);</span>
+
+<span class="c1"># set title </span>
+<span class="n">ttl</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Age and Sex Distributions&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="s2">&quot;large&quot;</span><span class="p">)</span>
+<span class="n">ttl</span><span class="o">.</span><span class="n">set_position</span><span class="p">([</span><span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/cov_lab_demographics_10_01.png" src="../../../_images/cov_lab_demographics_10_01.png" />
+</div>
+</div>
+</div>
+<div class="section" id="stai-trait-state-distributions-and-correlation">
+<h1>STAI trait/state  distributions and correlation<a class="headerlink" href="#stai-trait-state-distributions-and-correlation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overall-distribution">
+<h2>Overall distribution<a class="headerlink" href="#overall-distribution" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ivs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">];</span> 
+<span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STAI trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STAI state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA state anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;BDI&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastophizing&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
+STAI state anxiety
+STICSA trait anxiety
+STICSA state anxiety
+BDI
+Catastophizing
+</pre></div>
+</div>
+<img alt="../../../_images/cov_lab_demographics_13_11.png" src="../../../_images/cov_lab_demographics_13_11.png" />
+<img alt="../../../_images/cov_lab_demographics_13_21.png" src="../../../_images/cov_lab_demographics_13_21.png" />
+<img alt="../../../_images/cov_lab_demographics_13_31.png" src="../../../_images/cov_lab_demographics_13_31.png" />
+<img alt="../../../_images/cov_lab_demographics_13_41.png" src="../../../_images/cov_lab_demographics_13_41.png" />
+<img alt="../../../_images/cov_lab_demographics_13_51.png" src="../../../_images/cov_lab_demographics_13_51.png" />
+<img alt="../../../_images/cov_lab_demographics_13_61.png" src="../../../_images/cov_lab_demographics_13_61.png" />
+</div>
+</div>
+</div>
+<div class="section" id="cross-correlations-and-distributions">
+<h2>Cross correlations and distributions<a class="headerlink" href="#cross-correlations-and-distributions" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sdf</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">]]</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">sdf</span><span class="p">,</span> <span class="n">corner</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">diag_kind</span><span class="o">=</span><span class="s2">&quot;kde&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;reg&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">0.9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/cov_lab_demographics_15_01.png" src="../../../_images/cov_lab_demographics_15_01.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="cross-correlations">
+<h1>Cross Correlations<a class="headerlink" href="#cross-correlations" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,[</span><span class="s2">&quot;stai_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;stai_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_ta&quot;</span><span class="p">,</span> <span class="s2">&quot;sticsa_sa&quot;</span><span class="p">,</span> <span class="s2">&quot;bdi&quot;</span><span class="p">,</span> <span class="s2">&quot;cat&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rho</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<span class="n">pval</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="o">*</span><span class="n">rho</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pval</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;*&#39;</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.05</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span> <span class="k">if</span> <span class="n">x</span><span class="o">&lt;=</span><span class="n">t</span><span class="p">]))</span>
+<span class="n">rho</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stai_ta</th>
+      <th>stai_sa</th>
+      <th>sticsa_ta</th>
+      <th>sticsa_sa</th>
+      <th>bdi</th>
+      <th>cat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>stai_ta</th>
+      <td>1.0***</td>
+      <td>0.79***</td>
+      <td>0.79***</td>
+      <td>0.69***</td>
+      <td>0.81***</td>
+      <td>0.85***</td>
+    </tr>
+    <tr>
+      <th>stai_sa</th>
+      <td>0.79***</td>
+      <td>1.0***</td>
+      <td>0.76***</td>
+      <td>0.82***</td>
+      <td>0.78***</td>
+      <td>0.64***</td>
+    </tr>
+    <tr>
+      <th>sticsa_ta</th>
+      <td>0.79***</td>
+      <td>0.76***</td>
+      <td>1.0***</td>
+      <td>0.87***</td>
+      <td>0.81***</td>
+      <td>0.77***</td>
+    </tr>
+    <tr>
+      <th>sticsa_sa</th>
+      <td>0.69***</td>
+      <td>0.82***</td>
+      <td>0.87***</td>
+      <td>1.0***</td>
+      <td>0.85***</td>
+      <td>0.68***</td>
+    </tr>
+    <tr>
+      <th>bdi</th>
+      <td>0.81***</td>
+      <td>0.78***</td>
+      <td>0.81***</td>
+      <td>0.85***</td>
+      <td>1.0***</td>
+      <td>0.74***</td>
+    </tr>
+    <tr>
+      <th>cat</th>
+      <td>0.85***</td>
+      <td>0.64***</td>
+      <td>0.77***</td>
+      <td>0.68***</td>
+      <td>0.74***</td>
+      <td>1.0***</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">rho</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span> <span class="n">linecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">annot</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/cov_lab_demographics_20_11.png" src="../../../_images/cov_lab_demographics_20_11.png" />
+</div>
+</div>
+</div>
+<div class="section" id="summary-table">
+<h1>Summary Table<a class="headerlink" href="#summary-table" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="kn">import</span> <span class="nn">xlsxwriter</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dec</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#number of decimal points</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;Male&#39;</span><span class="p">,</span><span class="s1">&#39;Female&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="s1">&#39;SD&#39;</span><span class="p">]])</span>
+<span class="n">summary</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">((</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">/</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)],</span>
+                   <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">(),</span><span class="mi">2</span><span class="p">)]],</span> 
+                  <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> 
+                  <span class="n">columns</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+<span class="n">header1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_product</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                                     <span class="p">[</span><span class="s1">&#39;P&#39;</span><span class="p">]])</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_age&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;stai_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_ta&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;sticsa_sa&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;bdi&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)],</span>
+                    <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;cat&#39;</span><span class="p">][</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sr_gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])[</span><span class="mi">1</span><span class="p">],</span> <span class="n">dec</span><span class="p">)]],</span>
+                   <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Anxiety (STAIT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Anxiety (STAIS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Trait Cognitive and Somatic Anxiety (STICSAT)&#39;</span><span class="p">,</span> <span class="s1">&#39;State Cognitive and Somatic Anxiety (STICSAS)&#39;</span><span class="p">,</span> <span class="s1">&#39;Beck Depression Inventory (BDI)&#39;</span><span class="p">,</span> <span class="s1">&#39;Catastrophizing&#39;</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="n">header1</span><span class="p">)</span>
+
+<span class="n">visit1_lab_demographics</span> <span class="o">=</span> <span class="n">summary</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+
+<span class="n">visit1_lab_demographics</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s1">&#39;output/visit1_lab_demographics.xlsx&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">visit1_lab_demographics</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="3" halign="left">Male</th>
+      <th colspan="3" halign="left">Female</th>
+      <th></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>M</th>
+      <th>%</th>
+      <th>SD</th>
+      <th>P</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Gender</th>
+      <td></td>
+      <td>32.61 %</td>
+      <td></td>
+      <td></td>
+      <td>67.39 %</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>28.07</td>
+      <td></td>
+      <td>4.43</td>
+      <td>28.26</td>
+      <td></td>
+      <td>5.47</td>
+      <td>0.907</td>
+    </tr>
+    <tr>
+      <th>Trait Anxiety (STAIT)</th>
+      <td>29.00</td>
+      <td></td>
+      <td>9.44</td>
+      <td>37.84</td>
+      <td></td>
+      <td>11.02</td>
+      <td>0.011</td>
+    </tr>
+    <tr>
+      <th>State Anxiety (STAIS)</th>
+      <td>25.93</td>
+      <td></td>
+      <td>9.57</td>
+      <td>34.94</td>
+      <td></td>
+      <td>11.91</td>
+      <td>0.014</td>
+    </tr>
+    <tr>
+      <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
+      <td>25.60</td>
+      <td></td>
+      <td>8.28</td>
+      <td>29.10</td>
+      <td></td>
+      <td>8.19</td>
+      <td>0.183</td>
+    </tr>
+    <tr>
+      <th>State Cognitive and Somatic Anxiety (STICSAS)</th>
+      <td>24.93</td>
+      <td></td>
+      <td>6.57</td>
+      <td>28.71</td>
+      <td></td>
+      <td>8.62</td>
+      <td>0.142</td>
+    </tr>
+    <tr>
+      <th>Beck Depression Inventory (BDI)</th>
+      <td>2.80</td>
+      <td></td>
+      <td>4.31</td>
+      <td>7.40</td>
+      <td></td>
+      <td>7.28</td>
+      <td>0.029</td>
+    </tr>
+    <tr>
+      <th>Catastrophizing</th>
+      <td>12.87</td>
+      <td></td>
+      <td>14.45</td>
+      <td>20.52</td>
+      <td></td>
+      <td>14.61</td>
+      <td>0.102</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="response-distributions">
+<h2>Response distributions<a class="headerlink" href="#response-distributions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>histograms/density plots are normalized per category</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><svg  width="330" height="55"><rect x="0" y="0" width="55" height="55" style="fill:#35193e;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="55" y="0" width="55" height="55" style="fill:#701f57;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="110" y="0" width="55" height="55" style="fill:#ad1759;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="165" y="0" width="55" height="55" style="fill:#e13342;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="220" y="0" width="55" height="55" style="fill:#f37651;stroke-width:2;stroke:rgb(255,255,255)"/><rect x="275" y="0" width="55" height="55" style="fill:#f6b48f;stroke-width:2;stroke:rgb(255,255,255)"/></svg></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ivs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ta_overall&#39;</span><span class="p">,</span> <span class="s1">&#39;stta_overall&#39;</span><span class="p">,</span> <span class="s1">&#39;sr_age&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;q6_media_valence&#39;</span><span class="p">,</span> <span class="s1">&#39;covid_worry&#39;</span><span class="p">,</span> <span class="s1">&#39;covid_avoidance_beh&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;covid_spec_anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;covid_prob_estimates&#39;</span><span class="p">];</span> 
+<span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;STAI trait anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;STICSA trait&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">,</span> 
+         <span class="s1">&#39;Media valence&#39;</span><span class="p">,</span> <span class="s1">&#39;COVID worry&#39;</span><span class="p">,</span> <span class="s1">&#39;Avoidance behaviour&#39;</span><span class="p">,</span> 
+         <span class="s1">&#39;COVID-spec anxiety&#39;</span><span class="p">,</span> <span class="s1">&#39;COVID prob estimates&#39;</span><span class="p">]</span>
+
+<span class="n">em2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">email1</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Overall distribution&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;email1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">kde_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">bw_method</span><span class="o">=</span><span class="s1">&#39;scott&#39;</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mf">0.7</span><span class="p">),</span>
+                 <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">palette</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">),</span> <span class="n">common_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;General willingness to participate</span><span class="se">\n</span><span class="s1"> (n=81)&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+        
+    
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;email2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                <span class="n">kde_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">bw_method</span><span class="o">=</span><span class="s1">&#39;scott&#39;</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mf">0.6</span><span class="p">),</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">palette</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">),</span> <span class="n">common_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Willingness to participate in a shock study </span><span class="se">\n</span><span class="s1"> (n=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    <span class="c1">#sns.regplot(x=&#39;value&#39;, y=&#39;wage&#39;, data=df_melt, ax=axs[1])</span>
+    <span class="c1">#sns.boxplot(x=&#39;education&#39;,y=&#39;wage&#39;, data=df_melt, ax=axs[2])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
+STICSA trait
+Age
+Media valence
+COVID worry
+Avoidance behaviour
+COVID-spec anxiety
+COVID prob estimates
+</pre></div>
+</div>
+<img alt="../../../_images/cov_lab_demographics_27_11.png" src="../../../_images/cov_lab_demographics_27_11.png" />
+<img alt="../../../_images/cov_lab_demographics_27_21.png" src="../../../_images/cov_lab_demographics_27_21.png" />
+<img alt="../../../_images/cov_lab_demographics_27_31.png" src="../../../_images/cov_lab_demographics_27_31.png" />
+<img alt="../../../_images/cov_lab_demographics_27_41.png" src="../../../_images/cov_lab_demographics_27_41.png" />
+<img alt="../../../_images/cov_lab_demographics_27_51.png" src="../../../_images/cov_lab_demographics_27_51.png" />
+<img alt="../../../_images/cov_lab_demographics_27_61.png" src="../../../_images/cov_lab_demographics_27_61.png" />
+<img alt="../../../_images/cov_lab_demographics_27_71.png" src="../../../_images/cov_lab_demographics_27_71.png" />
+<img alt="../../../_images/cov_lab_demographics_27_81.png" src="../../../_images/cov_lab_demographics_27_81.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ivs = [&#39;ta_overall&#39;]</span>
+<span class="c1">#labels=  [&#39;trait anxiety&#39;]</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;magma&quot;</span><span class="p">,</span> <span class="n">as_cmap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ivs</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    
+    <span class="n">td</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">intersection</span><span class="p">([</span><span class="s2">&quot;email1&quot;</span><span class="p">,</span> <span class="n">v</span><span class="p">])]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">t</span><span class="p">,</span><span class="n">p</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">ranksums</span><span class="p">(</span><span class="n">td</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">td</span><span class="o">.</span><span class="n">email1</span><span class="o">==</span><span class="s2">&quot;No&quot;</span><span class="p">],</span> <span class="n">td</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">td</span><span class="o">.</span><span class="n">email1</span><span class="o">==</span><span class="s2">&quot;Yes&quot;</span><span class="p">]);</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">RainCloud</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;email1&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">v</span><span class="p">,</span> 
+                  <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                  <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> 
+                  <span class="n">width_viol</span> <span class="o">=</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span>
+                  <span class="n">width_box</span> <span class="o">=</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span>
+                  <span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                  <span class="n">palette</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="n">cmap</span><span class="p">(</span><span class="mi">60</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mi">180</span><span class="p">)]</span> <span class="p">),</span>
+                  <span class="n">alpha</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span>
+                  <span class="n">move</span> <span class="o">=</span> <span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Email 1: Are you willing to take part in an in-lab study?</span><span class="se">\n</span><span class="s1"> (before learning about shocks, n=81)&#39;</span><span class="p">,</span>
+                    <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    
+    <span class="c1">########</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">RainCloud</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;email2&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">v</span><span class="p">,</span> 
+                  <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                  <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> 
+                  <span class="n">width_viol</span> <span class="o">=</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span>
+                  <span class="n">width_box</span> <span class="o">=</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span>
+                  <span class="n">orient</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span>
+                  <span class="n">palette</span><span class="o">=</span><span class="nb">list</span><span class="p">([</span><span class="n">cmap</span><span class="p">(</span><span class="mi">160</span><span class="p">),</span> <span class="n">cmap</span><span class="p">(</span><span class="mi">200</span><span class="p">)]</span> <span class="p">),</span>
+                  <span class="n">alpha</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span>
+                  <span class="n">move</span> <span class="o">=</span> <span class="o">.</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Email 2: The study involves electrical stimuli, </span><span class="se">\n</span><span class="s1">do you still want to take part? (n=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">em2</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;)&#39;</span><span class="p">,</span>
+                     <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="c1">#plt.xticks(np.arange(20,80,10))</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="s1">&#39;No&#39;</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">hspace</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;output/figures/selection_bias/&#39;</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s1">&#39;.pdf&#39;</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;output/figures/selection_bias/&#39;</span><span class="o">+</span><span class="n">v</span><span class="o">+</span><span class="s1">&#39;.png&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.12998006207221469
+0.09962562419750537
+0.07963474708497245
+0.6038138770088421
+0.29934100790353024
+0.764312443116012
+0.541082457650242
+0.007465338555377086
+</pre></div>
+</div>
+<img alt="../../../_images/cov_lab_demographics_28_11.png" src="../../../_images/cov_lab_demographics_28_11.png" />
+<img alt="../../../_images/cov_lab_demographics_28_21.png" src="../../../_images/cov_lab_demographics_28_21.png" />
+<img alt="../../../_images/cov_lab_demographics_28_31.png" src="../../../_images/cov_lab_demographics_28_31.png" />
+<img alt="../../../_images/cov_lab_demographics_28_41.png" src="../../../_images/cov_lab_demographics_28_41.png" />
+<img alt="../../../_images/cov_lab_demographics_28_51.png" src="../../../_images/cov_lab_demographics_28_51.png" />
+<img alt="../../../_images/cov_lab_demographics_28_61.png" src="../../../_images/cov_lab_demographics_28_61.png" />
+<img alt="../../../_images/cov_lab_demographics_28_71.png" src="../../../_images/cov_lab_demographics_28_71.png" />
+<img alt="../../../_images/cov_lab_demographics_28_81.png" src="../../../_images/cov_lab_demographics_28_81.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;density&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">color</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Overall distribution&#39;</span><span class="p">)</span>
+    <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+    
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;email1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">kde_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">bw_method</span><span class="o">=</span><span class="s1">&#39;scott&#39;</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mf">0.7</span><span class="p">),</span>
+                  <span class="n">element</span><span class="o">=</span><span class="s2">&quot;step&quot;</span><span class="p">,</span>
+                <span class="n">palette</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;rocket&quot;</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="p">),</span> <span class="n">common_norm</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:title={&#39;center&#39;:&#39;Email 2: The study involves electrical stimuli, \ndo you still want to take part? (n=43)&#39;}, xlabel=&#39;COVID prob estimates&#39;, ylabel=&#39;Probability&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content2/_build/jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ondrej Zika<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
