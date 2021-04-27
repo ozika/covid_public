@@ -57,8 +57,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Lab Experiment Demographics" href="cov_lab_demographics.html" />
-    <link rel="prev" title="Collapsing measures" href="cov_collapsing_measures.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -117,77 +115,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="cov_collapsing_measures.html">
    Collapsing measures
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Demographics
- </span>
-</p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Online Demographics Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_lab_demographics.html">
-   Lab Experiment Demographics
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Descriptives
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html">
-   COVID Study - On-line part, Descriptives
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html#number-of-participants">
-   Number of participants
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html#basic-demographics">
-   basic demographics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html#personality-measures">
-   personality measures
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html#covid-questionnaires">
-   COVID Questionnaires
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_final_overview.html#aggregate-measures-descriptives">
-   Aggregate measures descriptives
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Analysis
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_inferential_I.html">
-   Inferential stats: Part I
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cov_inferential_I.html#exploratory-analyses">
-   Exploratory analyses
   </a>
  </li>
 </ul>
@@ -386,20 +313,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c82f77acf179</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">ptitprince</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -426,7 +339,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current working directory is: C:\Users\katya\MPI
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current working directory is: /data/drive/postdoc/Project4_covid
 </pre></div>
 </div>
 </div>
@@ -465,7 +378,7 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Index: 402 entries, 55d06fd334e9060012e5781c to 5eab262cef271f0e2a7e0075
-Data columns (total 80 columns):
+Data columns (total 86 columns):
  #   Column                      Non-Null Count  Dtype  
 ---  ------                      --------------  -----  
  0   submitdate                  400 non-null    object 
@@ -532,24 +445,30 @@ Data columns (total 80 columns):
  61  q8_t_life_back_norm_days    400 non-null    float64
  62  q8_t_secondw_when_days      295 non-null    float64
  63  q8_t_econ_back_norm_days    400 non-null    float64
- 64  covid_worry                 402 non-null    float64
- 65  covid_avoidance_beh         402 non-null    float64
- 66  covid_spec_anxiety          402 non-null    float64
- 67  covid_prob_estimates        402 non-null    float64
- 68  covid_end_est               400 non-null    float64
- 69  stai_ta                     401 non-null    float64
- 70  stai_sa                     402 non-null    float64
- 71  sticsa_ta                   402 non-null    float64
- 72  sticsa_cog_ta               402 non-null    float64
- 73  sticsa_som_ta               402 non-null    float64
- 74  sticsa_sa                   401 non-null    float64
- 75  sticsa_cog_sa               401 non-null    float64
- 76  sticsa_som_sa               401 non-null    float64
- 77  bdi                         402 non-null    float64
- 78  cat                         401 non-null    float64
- 79  PID                         402 non-null    object 
-dtypes: float64(65), int64(2), object(13)
-memory usage: 270.6+ KB
+ 64  q6_me_inf_resc              397 non-null    float64
+ 65  q6_close_person_inf_resc    397 non-null    float64
+ 66  q6_close_person_died_resc   397 non-null    float64
+ 67  q8_secondw_resc             402 non-null    float64
+ 68  obj_severity                402 non-null    float64
+ 69  covid_worry                 402 non-null    float64
+ 70  avoid_beh                   402 non-null    float64
+ 71  avoid_anx                   402 non-null    float64
+ 72  avoid_all                   402 non-null    float64
+ 73  prob_est                    402 non-null    float64
+ 74  covid_end_est               400 non-null    float64
+ 75  stai_ta                     401 non-null    float64
+ 76  stai_sa                     402 non-null    float64
+ 77  sticsa_ta                   402 non-null    float64
+ 78  sticsa_cog_ta               402 non-null    float64
+ 79  sticsa_som_ta               402 non-null    float64
+ 80  sticsa_sa                   401 non-null    float64
+ 81  sticsa_cog_sa               401 non-null    float64
+ 82  sticsa_som_sa               401 non-null    float64
+ 83  bdi                         402 non-null    float64
+ 84  cat                         401 non-null    float64
+ 85  PID                         402 non-null    object 
+dtypes: float64(71), int64(2), object(13)
+memory usage: 273.2+ KB
 </pre></div>
 </div>
 </div>
@@ -579,16 +498,18 @@ memory usage: 270.6+ KB
 STAI state anxiety
 STICSA trait anxiety
 STICSA state anxiety
-BDI
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BDI
 Catastophizing
 </pre></div>
 </div>
-<img alt="_images/cov_online_demographics_10_1.png" src="_images/cov_online_demographics_10_1.png" />
 <img alt="_images/cov_online_demographics_10_2.png" src="_images/cov_online_demographics_10_2.png" />
 <img alt="_images/cov_online_demographics_10_3.png" src="_images/cov_online_demographics_10_3.png" />
 <img alt="_images/cov_online_demographics_10_4.png" src="_images/cov_online_demographics_10_4.png" />
 <img alt="_images/cov_online_demographics_10_5.png" src="_images/cov_online_demographics_10_5.png" />
 <img alt="_images/cov_online_demographics_10_6.png" src="_images/cov_online_demographics_10_6.png" />
+<img alt="_images/cov_online_demographics_10_7.png" src="_images/cov_online_demographics_10_7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -814,7 +735,7 @@ Catastophizing
       <td>28.11</td>
       <td></td>
       <td>5.98</td>
-      <td>27.30</td>
+      <td>27.3</td>
       <td></td>
       <td>5.79</td>
       <td>0.183</td>
@@ -837,7 +758,7 @@ Catastophizing
       <td>42.55</td>
       <td></td>
       <td>12.34</td>
-      <td>0.000</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
@@ -847,13 +768,13 @@ Catastophizing
       <td>37.15</td>
       <td></td>
       <td>10.99</td>
-      <td>0.000</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>State Cognitive and Somatic Anxiety (STICSAS)</th>
       <td>31.07</td>
       <td></td>
-      <td>10.10</td>
+      <td>10.1</td>
       <td>33.69</td>
       <td></td>
       <td>10.71</td>
@@ -896,110 +817,9 @@ Catastophizing
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Index: 330 entries, 5cae6a77b38ea60016e54889 to 5cf122496b3f1e0017aaebc5
-Data columns (total 99 columns):
- #   Column                              Non-Null Count  Dtype  
----  ------                              --------------  -----  
- 0   submitdate                          329 non-null    object 
- 1   lastpage                            330 non-null    int64  
- 2   SESSIONID                           330 non-null    int64  
- 3   GROUP                               330 non-null    object 
- 4   sr_age                              329 non-null    float64
- 5   sr_gender                           324 non-null    object 
- 6   sr_postcode                         330 non-null    object 
- 7   q6_me_inf                           330 non-null    float64
- 8   q6_close_person_inf                 330 non-null    float64
- 9   q6_close_person_died                330 non-null    float64
- 10  q6_diagnosis_type                   31 non-null     object 
- 11  q6_econ_impact_me                   330 non-null    float64
- 12  q6_econ_impact_closep               330 non-null    float64
- 13  q6_work_home                        330 non-null    float64
- 14  q6_apply_soc_dist                   330 non-null    float64
- 15  q6_risk_group                       330 non-null    float64
- 16  q6_risk_group_closep                330 non-null    float64
- 17  q6_houshold_membs                   330 non-null    int64  
- 18  q6_media_freq                       330 non-null    object 
- 19  q6_media_name                       330 non-null    object 
- 20  q6_media_valence                    330 non-null    float64
- 21  q8_est_daily_cases                  325 non-null    float64
- 22  q7_memory_initial_worry             330 non-null    float64
- 23  q7_memory_initial_something_bad     330 non-null    float64
- 24  q8_memory_prob_infected             330 non-null    float64
- 25  q8_memory_prob_avg_person_infected  330 non-null    float64
- 26  q7_thinkof_nocases                  298 non-null    float64
- 27  q7_thinkof_nodeaths                 303 non-null    float64
- 28  q7_thinkof_strain_healthsys         294 non-null    float64
- 29  q7_thinkof_mishandled               295 non-null    float64
- 30  q7_thinkof_famimpact                300 non-null    float64
- 31  q7_thinkof_jobsimpact               301 non-null    float64
- 32  q7_thinkof_safety                   298 non-null    float64
- 33  q7_thinkof_wantitover               308 non-null    float64
- 34  q7_thinkof_vaccine                  300 non-null    float64
- 35  q7_worry_infected                   330 non-null    float64
- 36  q7_worry_die                        330 non-null    float64
- 37  q7_worry_econ_impact                330 non-null    float64
- 38  q7_worry_sthg_bad                   330 non-null    float64
- 39  q7_worry_insuf_help                 330 non-null    float64
- 40  q7_worry_closep_inf                 330 non-null    float64
- 41  q7_closep_die                       330 non-null    float64
- 42  q7_worry_shortage                   330 non-null    float64
- 43  q7_period_rel_danger                330 non-null    float64
- 44  q7_period_rel_safety                330 non-null    float64
- 45  q7_initial_surprise                 330 non-null    float64
- 46  q7_initial_scared                   330 non-null    float64
- 47  q7_people_overreact                 330 non-null    float64
- 48  q7_vir_not_as_dangerous             330 non-null    float64
- 49  q7_vir_made_lab                     330 non-null    float64
- 50  q7_inf_worry_frequency              330 non-null    object 
- 51  q7_diff_beh_freq                    330 non-null    object 
- 52  q7_beh_wash_hands                   330 non-null    float64
- 53  q7_beh_avoid_ppl                    330 non-null    float64
- 54  q7_beh_avoid_public_places          330 non-null    float64
- 55  q7_anx_touching_surf                330 non-null    float64
- 56  q7_anx_stand_close_to_ppl           330 non-null    float64
- 57  q7_anx_eating_food_out              330 non-null    float64
- 58  q7_anx_public_transp                330 non-null    float64
- 59  q7_anx_visit_doc                    330 non-null    float64
- 60  q7_anx_another_beh                  330 non-null    float64
- 61  q7_angry_cough                      330 non-null    float64
- 62  q7_scared_coughed                   330 non-null    float64
- 63  q7_covid_hoax                       330 non-null    float64
- 64  q8_prob_inf_me                      330 non-null    float64
- 65  q8_prob_die_me                      330 non-null    float64
- 66  q8_prob_econ_imp_me                 330 non-null    float64
- 67  q8_prob_inf_closep                  330 non-null    float64
- 68  q8_prob_die_closep                  330 non-null    float64
- 69  q8_prob_inf_avgp                    330 non-null    float64
- 70  q8_t_pand_end                       330 non-null    object 
- 71  q8_t_life_back_norm                 330 non-null    object 
- 72  q8_second_wave_starting             330 non-null    object 
- 73  q8_secondw                          330 non-null    float64
- 74  q8_t_secondw_when                   267 non-null    object 
- 75  q8_t_econ_back_norm                 330 non-null    object 
- 76  q6_media_freq_num                   330 non-null    float64
- 77  q7_inf_worry_frequency_num          330 non-null    float64
- 78  q7_diff_beh_freq_num                330 non-null    float64
- 79  q8_t_pand_end_days                  329 non-null    float64
- 80  q8_t_life_back_norm_days            329 non-null    float64
- 81  q8_t_secondw_when_days              266 non-null    float64
- 82  q8_t_econ_back_norm_days            329 non-null    float64
- 83  covid_worry                         330 non-null    float64
- 84  covid_avoidance_beh                 330 non-null    float64
- 85  covid_spec_anxiety                  330 non-null    float64
- 86  covid_prob_estimates                330 non-null    float64
- 87  covid_end_est                       329 non-null    float64
- 88  stai_ta                             330 non-null    float64
- 89  stai_sa                             329 non-null    float64
- 90  sticsa_ta                           329 non-null    float64
- 91  sticsa_cog_ta                       329 non-null    float64
- 92  sticsa_som_ta                       329 non-null    float64
- 93  sticsa_sa                           329 non-null    float64
- 94  sticsa_cog_sa                       329 non-null    float64
- 95  sticsa_som_sa                       329 non-null    float64
- 96  bdi                                 329 non-null    float64
- 97  cat                                 329 non-null    float64
- 98  PID                                 330 non-null    object 
-dtypes: float64(81), int64(3), object(15)
-memory usage: 257.8+ KB
+Columns: 107 entries, submitdate to PID
+dtypes: float64(89), int64(3), object(15)
+memory usage: 278.4+ KB
 </pre></div>
 </div>
 </div>
@@ -1030,15 +850,17 @@ STAI state anxiety
 STICSA trait anxiety
 STICSA state anxiety
 BDI
-Catastophizing
 </pre></div>
 </div>
-<img alt="_images/cov_online_demographics_21_1.png" src="_images/cov_online_demographics_21_1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Catastophizing
+</pre></div>
+</div>
 <img alt="_images/cov_online_demographics_21_2.png" src="_images/cov_online_demographics_21_2.png" />
 <img alt="_images/cov_online_demographics_21_3.png" src="_images/cov_online_demographics_21_3.png" />
 <img alt="_images/cov_online_demographics_21_4.png" src="_images/cov_online_demographics_21_4.png" />
 <img alt="_images/cov_online_demographics_21_5.png" src="_images/cov_online_demographics_21_5.png" />
 <img alt="_images/cov_online_demographics_21_6.png" src="_images/cov_online_demographics_21_6.png" />
+<img alt="_images/cov_online_demographics_21_7.png" src="_images/cov_online_demographics_21_7.png" />
 </div>
 </div>
 </div>
@@ -1288,11 +1110,11 @@ Catastophizing
       <td>38.77</td>
       <td></td>
       <td>13.01</td>
-      <td>0.040</td>
+      <td>0.04</td>
     </tr>
     <tr>
       <th>Trait Cognitive and Somatic Anxiety (STICSAT)</th>
-      <td>30.20</td>
+      <td>30.2</td>
       <td></td>
       <td>10.44</td>
       <td>33.71</td>
@@ -1308,14 +1130,14 @@ Catastophizing
       <td>30.93</td>
       <td></td>
       <td>10.56</td>
-      <td>0.050</td>
+      <td>0.05</td>
     </tr>
     <tr>
       <th>Beck Depression Inventory (BDI)</th>
       <td>10.29</td>
       <td></td>
       <td>10.19</td>
-      <td>12.10</td>
+      <td>12.1</td>
       <td></td>
       <td>10.35</td>
       <td>0.127</td>
@@ -1347,9 +1169,9 @@ Catastophizing
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Index: 300 entries, 5e7b9ed640bdc91aca715def to 5ea56ecd5d022354cb1c061e
-Columns: 110 entries, submitdate to PID
-dtypes: float64(38), int64(54), object(18)
-memory usage: 260.2+ KB
+Columns: 118 entries, submitdate to PID
+dtypes: float64(39), int64(61), object(18)
+memory usage: 278.9+ KB
 </pre></div>
 </div>
 </div>
@@ -1378,17 +1200,21 @@ memory usage: 260.2+ KB
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STAI trait anxiety
 STAI state anxiety
 STICSA trait anxiety
-STICSA state anxiety
-BDI
-Catastophizing
 </pre></div>
 </div>
-<img alt="_images/cov_online_demographics_33_1.png" src="_images/cov_online_demographics_33_1.png" />
-<img alt="_images/cov_online_demographics_33_2.png" src="_images/cov_online_demographics_33_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>STICSA state anxiety
+BDI
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Catastophizing
+</pre></div>
+</div>
 <img alt="_images/cov_online_demographics_33_3.png" src="_images/cov_online_demographics_33_3.png" />
 <img alt="_images/cov_online_demographics_33_4.png" src="_images/cov_online_demographics_33_4.png" />
 <img alt="_images/cov_online_demographics_33_5.png" src="_images/cov_online_demographics_33_5.png" />
 <img alt="_images/cov_online_demographics_33_6.png" src="_images/cov_online_demographics_33_6.png" />
+<img alt="_images/cov_online_demographics_33_7.png" src="_images/cov_online_demographics_33_7.png" />
+<img alt="_images/cov_online_demographics_33_8.png" src="_images/cov_online_demographics_33_8.png" />
 </div>
 </div>
 </div>
@@ -1614,7 +1440,7 @@ Catastophizing
       <th>Age</th>
       <td>29.57</td>
       <td></td>
-      <td>5.70</td>
+      <td>5.7</td>
       <td>28.84</td>
       <td></td>
       <td>5.78</td>
@@ -1624,10 +1450,10 @@ Catastophizing
       <th>Trait Anxiety (STAIT)</th>
       <td>41.17</td>
       <td></td>
-      <td>13.00</td>
+      <td>13</td>
       <td>44.91</td>
       <td></td>
-      <td>13.30</td>
+      <td>13.3</td>
       <td>0.018</td>
     </tr>
     <tr>
@@ -1675,10 +1501,10 @@ Catastophizing
       <td>23.75</td>
       <td></td>
       <td>16.98</td>
-      <td>31.50</td>
+      <td>31.5</td>
       <td></td>
       <td>18.64</td>
-      <td>0.000</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1716,8 +1542,6 @@ Catastophizing
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="cov_collapsing_measures.html" title="previous page">Collapsing measures</a>
-    <a class='right-next' id="next-link" href="cov_lab_demographics.html" title="next page">Lab Experiment Demographics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
